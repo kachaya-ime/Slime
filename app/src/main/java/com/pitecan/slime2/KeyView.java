@@ -60,6 +60,7 @@ public class KeyView extends View {
     private final int tinyKeyTextSize =  16;
     
     public float expand = (float)1.0; // 拡大率
+    public int bottomInset = 0;
     
     public Keys keys;
     public KeyController keyController = null;
@@ -335,7 +336,7 @@ public class KeyView extends View {
         int imeWidth = width;
         // if(width > height) imeWidth = height; // 何故かこれをやめるとうまいサイズになる 2019/1/5
         expand = (float)imeWidth / (float)320.0;
-        setMeasuredDimension((int)(320 * expand),(int)(216 * expand));
+        setMeasuredDimension((int)(320 * expand),(int)(216 * expand) + bottomInset);
         
         initGraphics();
     }

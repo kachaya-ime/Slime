@@ -32,6 +32,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import android.content.res.AssetManager;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.graphics.Insets;
 
 public class Slime extends InputMethodService 
 {
@@ -121,6 +124,14 @@ public class Slime extends InputMethodService
         keyController.sqlDict = sqlDict;
         keyController.slime = this;
         keyController.reset();
+
+        ViewCompat.setOnApplyWindowInsetsListener(keyView, (v, windowInsets) -> {
+            androidx.core.graphics.Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            ((KeyView) v).bottomInset = insets.bottom;
+            v.requestLayout();
+            return WindowInsetsCompat.CONSUMED;
+        });
+
         return keyView;
     }
     
