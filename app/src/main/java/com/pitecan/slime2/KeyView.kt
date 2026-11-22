@@ -8,14 +8,14 @@
 package com.pitecan.slime2
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.content.ContextCompat
 
 class CandButton {
     var rect: Rect = Rect(0, 0, 0, 0)
@@ -27,14 +27,8 @@ class CandButton {
 }
 
 class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
-    private var keybg32x53: Bitmap? = null
-    private var keyfg32x53: Bitmap? = null
-    private var keybg53x53: Bitmap? = null
-    private var keyfg53x53: Bitmap? = null
-    private var keybg53x106: Bitmap? = null
-    private var keyfg53x106: Bitmap? = null
-    private var keybg106x53: Bitmap? = null
-    private var keyfg106x53: Bitmap? = null
+    private var keyBgNormal: Drawable? = null
+    private var keyBgPressed: Drawable? = null
 
     private var keyPaint: Paint? = null
     private var smallKeyPaint: Paint? = null
@@ -70,15 +64,8 @@ class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
 
     init {
         // キー画像の読み込み
-        val r = context.resources
-        keybg53x53 = BitmapFactory.decodeResource(r, R.drawable.keybg53x53)
-        keyfg53x53 = BitmapFactory.decodeResource(r, R.drawable.keyfg53x53)
-        keybg53x106 = BitmapFactory.decodeResource(r, R.drawable.keybg53x106)
-        keyfg53x106 = BitmapFactory.decodeResource(r, R.drawable.keyfg53x106)
-        keybg106x53 = BitmapFactory.decodeResource(r, R.drawable.keybg106x53)
-        keyfg106x53 = BitmapFactory.decodeResource(r, R.drawable.keyfg106x53)
-        keybg32x53 = BitmapFactory.decodeResource(r, R.drawable.keybg32x53)
-        keyfg32x53 = BitmapFactory.decodeResource(r, R.drawable.keyfg32x53)
+        keyBgNormal = ContextCompat.getDrawable(context, R.drawable.key_bg_normal)
+        keyBgPressed = ContextCompat.getDrawable(context, R.drawable.key_bg_pressed)
 
         // 候補「ボタン」の初期化
         candButtons = Array(Slime.MAXCANDS) { CandButton() }
@@ -202,45 +189,46 @@ class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
     }
 
     override fun onDraw(canvas: Canvas) {
-        var image: Bitmap?
         val kpat = keypat ?: Keys.keypat0
 
         canvas.drawColor(bgcolor)
         // [Kotlinらしい改善] インデックスベースのforループを forEach に置き換え、可読性を向上
         kpat.forEach { key ->
             val width = key.rect.right - key.rect.left
-            val height = key.rect.bottom - key.rect.top
             val paint = if (width <= 24) tinyKeyPaint else if (width <= 32) smallKeyPaint else keyPaint
             val p = paint ?: return@forEach
             val fontMetrics = p.fontMetrics
             val ascent = fontMetrics.ascent
             val descent = fontMetrics.descent
-            val shadewidth = 6f
 
-            image = if ((selectedKey != null && key.str == selectedKey?.str) ||
+            val drawable = if ((selectedKey != null && key.str == selectedKey?.str) ||
                 (selectedKey2 != null && key.str == selectedKey2?.str)
             ) {
-                if (width == 32) keyfg32x53 else if (height == 106) keyfg53x106 else keyfg53x53
+                keyBgPressed
             } else {
-                if (width == 32) keybg32x53 else if (height == 106) keybg53x106 else keybg53x53
+                keyBgNormal
             }
 
             if (!(key.str == "→" && (candPage == 0 || candPage == 4))) {
-                val left = (key.rect.left * expand).toInt()
-                val top = (key.rect.top * expand).toInt()
-                val right = (key.rect.right * expand).toInt()
-                val bottom = (key.rect.bottom * expand).toInt()
+                val gap = (3 * expand).toInt()
+                val left = (key.rect.left * expand).toInt() + gap / 2
+                val top = (key.rect.top * expand).toInt() + gap / 2
+                val right = (key.rect.right * expand).toInt() - gap / 2
+                val bottom = (key.rect.bottom * expand).toInt() - gap / 2
                 val dst = Rect(left, top, right, bottom)
-                if (image != null) {
-                    canvas.drawBitmap(image, null, dst, null)
+                if (drawable != null) {
+                    drawable.bounds = dst
+                    drawable.draw(canvas)
                 }
 
                 //
                 // キー文字描画
                 //
+                val bodyRight = right - (3 * expand).toInt()
+                val bodyBottom = bottom - (3 * expand).toInt()
                 val textWidth = p.measureText(key.str)
-                val baseX = left + (right - left - (shadewidth * expand) - textWidth) / 2
-                val baseY = top + (bottom - top - (shadewidth * expand) - (ascent + descent)) / 2
+                val baseX = left + (bodyRight - left - textWidth) / 2
+                val baseY = top + (bodyBottom - top - (ascent + descent)) / 2
                 canvas.drawText(key.str, baseX, baseY, p)
             }
         }

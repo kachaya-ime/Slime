@@ -634,7 +634,7 @@
           {"str": "]", "pat": ""},
           {"str": "ゎ", "pat": ""},
           {"str": "ー", "pat": "-"},
-          {"str": "ん", "pat": "N"},
+          {"type": "spacer"},
           {"str": ",", "pat": ""}
         ]
       },
@@ -644,7 +644,7 @@
           {"str": ")", "pat": ""},
           {"str": "わ", "pat": "w"},
           {"str": "を", "pat": "W"},
-          {"type": "spacer"},
+          {"str": "ん", "pat": "N"},
           {"str": ".", "pat": ""}
         ]
       }
@@ -678,7 +678,7 @@
           {"str": "]", "pat": "", "shiftKeypat": "keypat20"},
           {"str": "ゎ", "pat": "", "shiftKeypat": "keypat20"},
           {"str": "ー", "pat": "-", "shiftKeypat": "keypat20"},
-          {"str": "ん", "pat": "N", "shiftKeypat": "keypat20"},
+          {"type": "spacer"},
           {"str": ",", "pat": "", "shiftKeypat": "keypat20"}
         ]
       },
@@ -688,7 +688,7 @@
           {"str": ")", "pat": "", "shiftKeypat": "keypat20"},
           {"str": "わ", "pat": "w", "shiftKeypat": "keypat20"},
           {"str": "を", "pat": "W", "shiftKeypat": "keypat20"},
-          {"type": "spacer"},
+          {"str": "ん", "pat": "N", "shiftKeypat": "keypat20"},
           {"str": ".", "pat": "", "shiftKeypat": "keypat20"}
         ]
       }
