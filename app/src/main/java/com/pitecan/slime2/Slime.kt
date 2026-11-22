@@ -71,7 +71,7 @@ class Slime : InputMethodService() {
      */
     override fun onInitializeInterface() {
         super.onInitializeInterface() // 必要??
-        keys = Keys()
+        keys = Keys(resources.assets)
         keyController = KeyController()
     }
 

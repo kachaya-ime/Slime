@@ -1,0 +1,954 @@
+{
+  "meta": {
+    "initial": "keypat0",
+    "backspace": "keypatbs",
+    "space": "keypatsp",
+    "consonants": [
+      "keypat1",
+      "keypat2",
+      "keypat3",
+      "keypat4",
+      "keypat5",
+      "keypat6",
+      "keypat7",
+      "keypat8",
+      "keypat9",
+      "keypat10"
+    ]
+  },
+  "keypat11": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ぁ", "pat": "A"},
+          {"str": "ぃ", "pat": "I"},
+          {"str": "ぅ", "pat": "U"},
+          {"str": "ぇ", "pat": "E"},
+          {"str": "ぉ", "pat": "O"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "あ", "pat": "a"},
+          {"str": "い", "pat": "i"},
+          {"str": "う", "pat": "u"},
+          {"str": "え", "pat": "e"},
+          {"str": "お", "pat": "o"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat1": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ぁ", "pat": "A", "shiftKeypat": "keypat11"},
+          {"str": "ぃ", "pat": "I", "shiftKeypat": "keypat11"},
+          {"str": "ぅ", "pat": "U", "shiftKeypat": "keypat11"},
+          {"str": "ぇ", "pat": "E", "shiftKeypat": "keypat11"},
+          {"str": "ぉ", "pat": "O", "shiftKeypat": "keypat11"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "あ", "pat": "a", "shiftKeypat": "keypat11"},
+          {"str": "い", "pat": "i", "shiftKeypat": "keypat11"},
+          {"str": "う", "pat": "u", "shiftKeypat": "keypat11"},
+          {"str": "え", "pat": "e", "shiftKeypat": "keypat11"},
+          {"str": "お", "pat": "o", "shiftKeypat": "keypat11"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat12": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "が", "pat": "ga"},
+          {"str": "ぎ", "pat": "gi"},
+          {"str": "ぐ", "pat": "gu"},
+          {"str": "げ", "pat": "ge"},
+          {"str": "ご", "pat": "go"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "か", "pat": "ka"},
+          {"str": "き", "pat": "ki"},
+          {"str": "く", "pat": "ku"},
+          {"str": "け", "pat": "ke"},
+          {"str": "こ", "pat": "ko"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat2": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "が", "pat": "ga", "shiftKeypat": "keypat12"},
+          {"str": "ぎ", "pat": "gi", "shiftKeypat": "keypat12"},
+          {"str": "ぐ", "pat": "gu", "shiftKeypat": "keypat12"},
+          {"str": "げ", "pat": "ge", "shiftKeypat": "keypat12"},
+          {"str": "ご", "pat": "go", "shiftKeypat": "keypat12"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "か", "pat": "ka", "shiftKeypat": "keypat12"},
+          {"str": "き", "pat": "ki", "shiftKeypat": "keypat12"},
+          {"str": "く", "pat": "ku", "shiftKeypat": "keypat12"},
+          {"str": "け", "pat": "ke", "shiftKeypat": "keypat12"},
+          {"str": "こ", "pat": "ko", "shiftKeypat": "keypat12"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat13": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ざ", "pat": "za"},
+          {"str": "じ", "pat": "zi"},
+          {"str": "ず", "pat": "zu"},
+          {"str": "ぜ", "pat": "ze"},
+          {"str": "ぞ", "pat": "zo"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "さ", "pat": "sa"},
+          {"str": "し", "pat": "si"},
+          {"str": "す", "pat": "su"},
+          {"str": "せ", "pat": "se"},
+          {"str": "そ", "pat": "so"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat3": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ざ", "pat": "za", "shiftKeypat": "keypat13"},
+          {"str": "じ", "pat": "zi", "shiftKeypat": "keypat13"},
+          {"str": "ず", "pat": "zu", "shiftKeypat": "keypat13"},
+          {"str": "ぜ", "pat": "ze", "shiftKeypat": "keypat13"},
+          {"str": "ぞ", "pat": "zo", "shiftKeypat": "keypat13"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "さ", "pat": "sa", "shiftKeypat": "keypat13"},
+          {"str": "し", "pat": "si", "shiftKeypat": "keypat13"},
+          {"str": "す", "pat": "su", "shiftKeypat": "keypat13"},
+          {"str": "せ", "pat": "se", "shiftKeypat": "keypat13"},
+          {"str": "そ", "pat": "so", "shiftKeypat": "keypat13"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat14": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "だ", "pat": "da"},
+          {"str": "ぢ", "pat": "di"},
+          {"str": "づ", "pat": "du"},
+          {"str": "で", "pat": "de"},
+          {"str": "ど", "pat": "do"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "た", "pat": "ta"},
+          {"str": "ち", "pat": "ti"},
+          {"str": "つ", "pat": "tu"},
+          {"str": "て", "pat": "te"},
+          {"str": "と", "pat": "to"},
+          {"str": "っ", "pat": "Tu"}
+        ]
+      }
+    ]
+  },
+  "keypat4": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "だ", "pat": "da", "shiftKeypat": "keypat14"},
+          {"str": "ぢ", "pat": "di", "shiftKeypat": "keypat14"},
+          {"str": "づ", "pat": "du", "shiftKeypat": "keypat14"},
+          {"str": "で", "pat": "de", "shiftKeypat": "keypat14"},
+          {"str": "ど", "pat": "do", "shiftKeypat": "keypat14"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "た", "pat": "ta", "shiftKeypat": "keypat14"},
+          {"str": "ち", "pat": "ti", "shiftKeypat": "keypat14"},
+          {"str": "つ", "pat": "tu", "shiftKeypat": "keypat14"},
+          {"str": "て", "pat": "te", "shiftKeypat": "keypat14"},
+          {"str": "と", "pat": "to", "shiftKeypat": "keypat14"},
+          {"str": "っ", "pat": "Tu", "shiftKeypat": "keypat14"}
+        ]
+      }
+    ]
+  },
+  "keypat15": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "《", "pat": ""},
+          {"str": "〈", "pat": ""},
+          {"str": "【", "pat": ""},
+          {"str": "『", "pat": ""},
+          {"str": "「", "pat": ""},
+          {"str": "“", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "》", "pat": ""},
+          {"str": "〉", "pat": ""},
+          {"str": "】", "pat": ""},
+          {"str": "』", "pat": ""},
+          {"str": "」", "pat": ""},
+          {"str": "”", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "な", "pat": "na"},
+          {"str": "に", "pat": "ni"},
+          {"str": "ぬ", "pat": "nu"},
+          {"str": "ね", "pat": "ne"},
+          {"str": "の", "pat": "no"},
+          {"str": "・", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "〜", "pat": ""},
+          {"str": "…", "pat": ""},
+          {"str": ".", "pat": ""},
+          {"str": ",", "pat": ""},
+          {"str": "。", "pat": ""},
+          {"str": "、", "pat": ""}
+        ]
+      }
+    ]
+  },
+  "keypat5": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "《", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "〈", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "【", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "『", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "「", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "“", "pat": "", "shiftKeypat": "keypat15"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "》", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "〉", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "】", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "』", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "」", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "”", "pat": "", "shiftKeypat": "keypat15"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "な", "pat": "na", "shiftKeypat": "keypat15"},
+          {"str": "に", "pat": "ni", "shiftKeypat": "keypat15"},
+          {"str": "ぬ", "pat": "nu", "shiftKeypat": "keypat15"},
+          {"str": "ね", "pat": "ne", "shiftKeypat": "keypat15"},
+          {"str": "の", "pat": "no", "shiftKeypat": "keypat15"},
+          {"str": "・", "pat": "", "shiftKeypat": "keypat15"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "〜", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "…", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": ".", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": ",", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "。", "pat": "", "shiftKeypat": "keypat15"},
+          {"str": "、", "pat": "", "shiftKeypat": "keypat15"}
+        ]
+      }
+    ]
+  },
+  "keypat16": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ぱ", "pat": "pa"},
+          {"str": "ぴ", "pat": "pi"},
+          {"str": "ぷ", "pat": "pu"},
+          {"str": "ぺ", "pat": "pe"},
+          {"str": "ぽ", "pat": "po"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "ば", "pat": "ba"},
+          {"str": "び", "pat": "bi"},
+          {"str": "ぶ", "pat": "bu"},
+          {"str": "べ", "pat": "be"},
+          {"str": "ぼ", "pat": "bo"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "は", "pat": "ha"},
+          {"str": "ひ", "pat": "hi"},
+          {"str": "ふ", "pat": "hu"},
+          {"str": "へ", "pat": "he"},
+          {"str": "ほ", "pat": "ho"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat6": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ぱ", "pat": "pa", "shiftKeypat": "keypat16"},
+          {"str": "ぴ", "pat": "pi", "shiftKeypat": "keypat16"},
+          {"str": "ぷ", "pat": "pu", "shiftKeypat": "keypat16"},
+          {"str": "ぺ", "pat": "pe", "shiftKeypat": "keypat16"},
+          {"str": "ぽ", "pat": "po", "shiftKeypat": "keypat16"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "ば", "pat": "ba", "shiftKeypat": "keypat16"},
+          {"str": "び", "pat": "bi", "shiftKeypat": "keypat16"},
+          {"str": "ぶ", "pat": "bu", "shiftKeypat": "keypat16"},
+          {"str": "べ", "pat": "be", "shiftKeypat": "keypat16"},
+          {"str": "ぼ", "pat": "bo", "shiftKeypat": "keypat16"},
+          {"type": "spacer"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "は", "pat": "ha", "shiftKeypat": "keypat16"},
+          {"str": "ひ", "pat": "hi", "shiftKeypat": "keypat16"},
+          {"str": "ふ", "pat": "hu", "shiftKeypat": "keypat16"},
+          {"str": "へ", "pat": "he", "shiftKeypat": "keypat16"},
+          {"str": "ほ", "pat": "ho", "shiftKeypat": "keypat16"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat17": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "0", "pat": ""},
+          {"str": "1", "pat": ""},
+          {"str": "2", "pat": ""},
+          {"str": "3", "pat": ""},
+          {"str": "4", "pat": ""},
+          {"str": "←", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "5", "pat": ""},
+          {"str": "6", "pat": ""},
+          {"str": "7", "pat": ""},
+          {"str": "8", "pat": ""},
+          {"str": "9", "pat": ""},
+          {"str": " ", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "+", "pat": ""},
+          {"type": "spacer", "weight": 4.0},
+          {"str": "-", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "ま", "pat": "ma"},
+          {"str": "み", "pat": "mi"},
+          {"str": "む", "pat": "mu"},
+          {"str": "め", "pat": "me"},
+          {"str": "も", "pat": "mo"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat7": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "0", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "1", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "2", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "3", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "4", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "←", "pat": "", "shiftKeypat": "keypat17"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "5", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "6", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "7", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "8", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": "9", "pat": "", "shiftKeypat": "keypat17"},
+          {"str": " ", "pat": "", "shiftKeypat": "keypat17"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "+", "pat": "", "shiftKeypat": "keypat17"},
+          {"type": "spacer", "weight": 4.0},
+          {"str": "-", "pat": "", "shiftKeypat": "keypat17"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "ま", "pat": "ma", "shiftKeypat": "keypat17"},
+          {"str": "み", "pat": "mi", "shiftKeypat": "keypat17"},
+          {"str": "む", "pat": "mu", "shiftKeypat": "keypat17"},
+          {"str": "め", "pat": "me", "shiftKeypat": "keypat17"},
+          {"str": "も", "pat": "mo", "shiftKeypat": "keypat17"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat18": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ゃ", "pat": "Ya", "weight": 2.0},
+          {"str": "ゅ", "pat": "Yu"},
+          {"str": "ょ", "pat": "Yo", "weight": 2.0}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "や", "pat": "ya", "weight": 2.0},
+          {"str": "ゆ", "pat": "yu"},
+          {"str": "よ", "pat": "yo", "weight": 2.0}
+        ]
+      }
+    ]
+  },
+  "keypat8": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"str": "ゃ", "pat": "Ya", "weight": 2.0, "shiftKeypat": "keypat18"},
+          {"str": "ゅ", "pat": "Yu", "shiftKeypat": "keypat18"},
+          {"str": "ょ", "pat": "Yo", "weight": 2.0, "shiftKeypat": "keypat18"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "や", "pat": "ya", "weight": 2.0, "shiftKeypat": "keypat18"},
+          {"str": "ゆ", "pat": "yu", "shiftKeypat": "keypat18"},
+          {"str": "よ", "pat": "yo", "weight": 2.0, "shiftKeypat": "keypat18"}
+        ]
+      }
+    ]
+  },
+  "keypat19": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "'", "pat": ""},
+          {"str": "\"", "pat": ""},
+          {"str": "^", "pat": ""},
+          {"str": "|", "pat": ""},
+          {"str": "%", "pat": ""},
+          {"str": "=", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "`", "pat": ""},
+          {"str": "<", "pat": ""},
+          {"str": ">", "pat": ""},
+          {"str": "_", "pat": ""},
+          {"str": "$", "pat": ""},
+          {"str": "*", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "+", "pat": ""},
+          {"type": "spacer", "weight": 4.0},
+          {"str": "-", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "ら", "pat": "ra"},
+          {"str": "り", "pat": "ri"},
+          {"str": "る", "pat": "ru"},
+          {"str": "れ", "pat": "re"},
+          {"str": "ろ", "pat": "ro"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat9": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "'", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "\"", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "^", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "|", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "%", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "=", "pat": "", "shiftKeypat": "keypat19"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "`", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "<", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": ">", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "_", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "$", "pat": "", "shiftKeypat": "keypat19"},
+          {"str": "*", "pat": "", "shiftKeypat": "keypat19"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "+", "pat": "", "shiftKeypat": "keypat19"},
+          {"type": "spacer", "weight": 4.0},
+          {"str": "-", "pat": "", "shiftKeypat": "keypat19"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "ら", "pat": "ra", "shiftKeypat": "keypat19"},
+          {"str": "り", "pat": "ri", "shiftKeypat": "keypat19"},
+          {"str": "る", "pat": "ru", "shiftKeypat": "keypat19"},
+          {"str": "れ", "pat": "re", "shiftKeypat": "keypat19"},
+          {"str": "ろ", "pat": "ro", "shiftKeypat": "keypat19"},
+          {"type": "spacer"}
+        ]
+      }
+    ]
+  },
+  "keypat20": {
+    "rows": [
+      {
+        "keys": [
+          {"str": ":", "pat": ""},
+          {"str": ";", "pat": ""},
+          {"str": "#", "pat": ""},
+          {"str": "&", "pat": ""},
+          {"str": "~", "pat": ""},
+          {"str": "!", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "{", "pat": ""},
+          {"str": "}", "pat": ""},
+          {"str": "@", "pat": ""},
+          {"str": "/", "pat": ""},
+          {"str": "\\", "pat": ""},
+          {"str": "?", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "[", "pat": ""},
+          {"str": "]", "pat": ""},
+          {"str": "ゎ", "pat": ""},
+          {"str": "ー", "pat": "-"},
+          {"str": "ん", "pat": "N"},
+          {"str": ",", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "(", "pat": ""},
+          {"str": ")", "pat": ""},
+          {"str": "わ", "pat": "w"},
+          {"str": "を", "pat": "W"},
+          {"type": "spacer"},
+          {"str": ".", "pat": ""}
+        ]
+      }
+    ]
+  },
+  "keypat10": {
+    "rows": [
+      {
+        "keys": [
+          {"str": ":", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": ";", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "#", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "&", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "~", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "!", "pat": "", "shiftKeypat": "keypat20"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "{", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "}", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "@", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "/", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "\\", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "?", "pat": "", "shiftKeypat": "keypat20"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "[", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "]", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "ゎ", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "ー", "pat": "-", "shiftKeypat": "keypat20"},
+          {"str": "ん", "pat": "N", "shiftKeypat": "keypat20"},
+          {"str": ",", "pat": "", "shiftKeypat": "keypat20"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "(", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": ")", "pat": "", "shiftKeypat": "keypat20"},
+          {"str": "わ", "pat": "w", "shiftKeypat": "keypat20"},
+          {"str": "を", "pat": "W", "shiftKeypat": "keypat20"},
+          {"type": "spacer"},
+          {"str": ".", "pat": "", "shiftKeypat": "keypat20"}
+        ]
+      }
+    ]
+  },
+  "keypatbs_shift": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "Q", "pat": ""},
+          {"str": "W", "pat": ""},
+          {"str": "E", "pat": ""},
+          {"str": "R", "pat": ""},
+          {"str": "T", "pat": ""},
+          {"str": "Y", "pat": ""},
+          {"str": "U", "pat": ""},
+          {"str": "I", "pat": ""},
+          {"str": "O", "pat": ""},
+          {"str": "P", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer", "weight": 0.5},
+          {"str": "A", "pat": ""},
+          {"str": "S", "pat": ""},
+          {"str": "D", "pat": ""},
+          {"str": "F", "pat": ""},
+          {"str": "G", "pat": ""},
+          {"str": "H", "pat": ""},
+          {"str": "J", "pat": ""},
+          {"str": "K", "pat": ""},
+          {"str": "L", "pat": ""},
+          {"type": "spacer", "weight": 0.5}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer"},
+          {"str": "Z", "pat": ""},
+          {"str": "X", "pat": ""},
+          {"str": "C", "pat": ""},
+          {"str": "V", "pat": ""},
+          {"str": "B", "pat": ""},
+          {"str": "N", "pat": ""},
+          {"str": "M", "pat": ""},
+          {"type": "spacer", "weight": 2.0}
+        ]
+      },
+      {
+        "keys": [
+          {"str": ":", "pat": ""},
+          {"str": "@", "pat": ""},
+          {"str": ".", "pat": ""},
+          {"str": "/", "pat": ""},
+          {"str": " ", "pat": "", "weight": 4.0},
+          {"str": "←", "pat": "", "weight": 2.0}
+        ]
+      }
+    ]
+  },
+  "keypatbs": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "Q", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "W", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "E", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "R", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "T", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "Y", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "U", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "I", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "O", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "P", "pat": "", "shiftKeypat": "keypatbs_shift"}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer", "weight": 0.5},
+          {"str": "A", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "S", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "D", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "F", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "G", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "H", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "J", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "K", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "L", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"type": "spacer", "weight": 0.5}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer"},
+          {"str": "Z", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "X", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "C", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "V", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "B", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "N", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "M", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"type": "spacer", "weight": 2.0}
+        ]
+      },
+      {
+        "keys": [
+          {"str": ":", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "@", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": ".", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": "/", "pat": "", "shiftKeypat": "keypatbs_shift"},
+          {"str": " ", "pat": "", "weight": 4.0, "shiftKeypat": "keypatbs_shift"},
+          {"str": "←", "pat": "", "weight": 2.0, "shiftKeypat": "keypatbs_shift"}
+        ]
+      }
+    ]
+  },
+  "keypatsp_shift": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "q", "pat": ""},
+          {"str": "w", "pat": ""},
+          {"str": "e", "pat": ""},
+          {"str": "r", "pat": ""},
+          {"str": "t", "pat": ""},
+          {"str": "y", "pat": ""},
+          {"str": "u", "pat": ""},
+          {"str": "i", "pat": ""},
+          {"str": "o", "pat": ""},
+          {"str": "p", "pat": ""}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer", "weight": 0.5},
+          {"str": "a", "pat": ""},
+          {"str": "s", "pat": ""},
+          {"str": "d", "pat": ""},
+          {"str": "f", "pat": ""},
+          {"str": "g", "pat": ""},
+          {"str": "h", "pat": ""},
+          {"str": "j", "pat": ""},
+          {"str": "k", "pat": ""},
+          {"str": "l", "pat": ""},
+          {"type": "spacer", "weight": 0.5}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer"},
+          {"str": "z", "pat": ""},
+          {"str": "x", "pat": ""},
+          {"str": "c", "pat": ""},
+          {"str": "v", "pat": ""},
+          {"str": "b", "pat": ""},
+          {"str": "n", "pat": ""},
+          {"str": "m", "pat": ""},
+          {"type": "spacer", "weight": 2.0}
+        ]
+      },
+      {
+        "keys": [
+          {"str": ":", "pat": ""},
+          {"str": "@", "pat": ""},
+          {"str": ".", "pat": ""},
+          {"str": "/", "pat": ""},
+          {"str": " ", "pat": "", "weight": 4.0},
+          {"str": "←", "pat": "", "weight": 2.0}
+        ]
+      }
+    ]
+  },
+  "keypatsp": {
+    "rows": [
+      {
+        "keys": [
+          {"str": "q", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "w", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "e", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "r", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "t", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "y", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "u", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "i", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "o", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "p", "pat": "", "shiftKeypat": "keypatsp_shift"}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer", "weight": 0.5},
+          {"str": "a", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "s", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "d", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "f", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "g", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "h", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "j", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "k", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "l", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"type": "spacer", "weight": 0.5}
+        ]
+      },
+      {
+        "keys": [
+          {"type": "spacer"},
+          {"str": "z", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "x", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "c", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "v", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "b", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "n", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "m", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"type": "spacer", "weight": 2.0}
+        ]
+      },
+      {
+        "keys": [
+          {"str": ":", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "@", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": ".", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": "/", "pat": "", "shiftKeypat": "keypatsp_shift"},
+          {"str": " ", "pat": "", "weight": 4.0, "shiftKeypat": "keypatsp_shift"},
+          {"str": "←", "pat": "", "weight": 2.0, "shiftKeypat": "keypatsp_shift"}
+        ]
+      }
+    ]
+  },
+  "keypat0": {
+    "rows": [
+      {
+        "keys": []
+      },
+      {
+        "keys": [
+          {"type": "spacer", "weight": 5.0},
+          {"str": "→", "pat": "", "shiftKeypat": "keypat1"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "あ", "pat": "[aiueoAIUEO]", "shiftKeypat": "keypat1"},
+          {"str": "か", "pat": "[kg][aiueo]", "shiftKeypat": "keypat2"},
+          {"str": "さ", "pat": "[sz][aiueo]", "shiftKeypat": "keypat3"},
+          {"str": "た", "pat": "[tdT][aiueo]", "shiftKeypat": "keypat4"},
+          {"str": "な", "pat": "n[aiueo]", "shiftKeypat": "keypat5"},
+          {"str": "←", "pat": "", "shiftKeypat": "keypatbs"}
+        ]
+      },
+      {
+        "keys": [
+          {"str": "は", "pat": "[hbp][aiueo]", "shiftKeypat": "keypat6"},
+          {"str": "ま", "pat": "m[aiueo]", "shiftKeypat": "keypat7"},
+          {"str": "や", "pat": "[yY][auo]", "shiftKeypat": "keypat8"},
+          {"str": "ら", "pat": "r[aiueo]", "shiftKeypat": "keypat9"},
+          {"str": "ん", "pat": "[wWN]", "shiftKeypat": "keypat10"},
+          {"str": "↴", "pat": "", "shiftKeypat": "keypatsp"}
+        ]
+      }
+    ]
+  }
+}
