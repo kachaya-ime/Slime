@@ -36,9 +36,6 @@ class SearchTask(
                 if (pat.isNotEmpty()) {
                     // cancel() が呼ばれると isCancelled が true になる
                     Search.search(pat, word, useGoogle, this@SearchTask, sqlDict, slime)
-                    if (isCancelled) {
-                        // Log.v("Slime", "onCancelled");
-                    }
                 } else {
                     Search.ncands = 0
                     Search.addCandidateWithLevel("が", "ga", 0)
@@ -71,7 +68,7 @@ class SearchTask(
         }
     }
 
-    fun cancel(mayInterruptIfRunning: Boolean) {
+    fun cancel() {
         isCancelled = true
         job?.cancel()
     }

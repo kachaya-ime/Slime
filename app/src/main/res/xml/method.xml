@@ -17,4 +17,5 @@
  */
 -->
 
-<input-method xmlns:android="http://schemas.android.com/apk/res/android" />
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.pitecan.slime2.SettingsActivity" />

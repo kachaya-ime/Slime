@@ -119,13 +119,9 @@ class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
         return true
     }
 
-    fun draw2(keypat: Array<Key>?, selectedKey: Key?, selectedKey2: Key?, candPage: Int) {
-        this.keypat = keypat
-        this.selectedKey = selectedKey
-        this.selectedKey2 = selectedKey2
-        this.candPage = candPage
-        bgcolor = 0xffd0d0d0.toInt()
-        invalidate()
+    override fun performClick(): Boolean {
+        super.performClick()
+        return true
     }
 
     fun draw(keypat: Array<Key>?, selectedKey: Key?, selectedKey2: Key?, candPage: Int) {

@@ -7,8 +7,8 @@
 
 package com.pitecan.slime2
 
+import android.annotation.SuppressLint
 import android.content.ClipboardManager
-import android.content.Context
 import android.content.res.AssetManager
 import android.inputmethodservice.InputMethodService
 import android.net.ConnectivityManager
@@ -54,7 +54,7 @@ class Slime : InputMethodService() {
 
         dict = LocalDict(asMgr)
         sqlDict = SQLDict(this)
-        search = Search(dict!!, sqlDict!!, this)
+        search = Search(this)
         cm = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
         clipboardText = getClipboardTextString()
 
@@ -76,21 +76,12 @@ class Slime : InputMethodService() {
     }
 
     /**
-     * This is the main point where we do our initialization of the input method
-     * to begin operating on an application.  At this point we have been
-     * bound to the client, and are now receiving all of the detailed information
-     * about the target of our edits.
-     */
-    override fun onStartInput(attribute: EditorInfo?, restarting: Boolean) {
-        super.onStartInput(attribute, restarting)
-    }
-
-    /**
      * Called by the framework when your view for creating input needs to
      * be generated.  This will be called the first time your input method
      * is displayed, and every time it needs to be re-created such as due to
      * a configuration change.
      */
+    @SuppressLint("InflateParams")
     override fun onCreateInputView(): View {
         super.onCreateInputView() // 必要??
         /*
@@ -130,10 +121,6 @@ class Slime : InputMethodService() {
         keyController?.resetInput()
     }
 
-    override fun onFinishInput() {
-        super.onFinishInput()
-    }
-
     fun input(s: String) {
         val ic = currentInputConnection
         ic?.commitText(s, 1) // 入力貼り付け
@@ -170,14 +157,15 @@ class Slime : InputMethodService() {
         clipboardText = getClipboardTextString()
     }
 
-    fun getRegWord(): String {
-        val s = getClipboardTextString()
-        return if (s == clipboardText) {
-            ""
-        } else {
-            s
+    val regWord: String
+        get() {
+            val s = getClipboardTextString()
+            return if (s == clipboardText) {
+                ""
+            } else {
+                s
+            }
         }
-    }
 
     //
     // キーボードが表示されているときBackボタンが押されたら対応する
@@ -207,7 +195,7 @@ class Slime : InputMethodService() {
     // それ以前のバージョンでは互換性のために activeNetworkInfo を使用するように修正
     //
     fun isConnected(): Boolean {
-        val connManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val connected = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             val network = connManager.activeNetwork
             if (network == null) {

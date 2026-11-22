@@ -9,7 +9,7 @@ import android.util.Log
 
 class Candidate(var pat: String, var word: String, var weight: Int)
 
-class Search(val localDict: LocalDict, val sqlDict: SQLDict, val slime: Slime) {
+class Search(val slime: Slime) {
     companion object {
         var candidates: Array<Candidate> = Array(Slime.MAXCANDS) { Candidate("", "", 0) }
         var ncands = 0
@@ -36,7 +36,7 @@ class Search(val localDict: LocalDict, val sqlDict: SQLDict, val slime: Slime) {
 
             // コピーした単語を候補に出す (新規登録用)
             if (!LocalDict.exactMode) {
-                val s = slime.getRegWord()
+                val s = slime.regWord
                 if (s.isNotEmpty() && s.length < 10) { // コピー文字列が短い場合だけ候補にする
                     addCandidate(s, Keys.hira2pat(word))
                 }

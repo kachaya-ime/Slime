@@ -11,16 +11,6 @@ import android.view.MotionEvent
 import java.util.ArrayList
 import java.util.regex.Pattern
 
-// 候補に重みづけするための比較ルーチン
-// [Kotlinらしい改善] Javaの冗長なComparator実装を、compareByビルダーを用いて簡潔に記述
-class CandidateComparator : Comparator<Any> {
-    override fun compare(o1: Any, o2: Any): Int {
-        val c1 = o1 as Candidate
-        val c2 = o2 as Candidate
-        return compareBy<Candidate>({ it.weight }, { it.word.length }).compare(c1, c2)
-    }
-}
-
 class KeyController {
     // これらはSlime.onCreateInputView()でセットされる
     lateinit var keyView: KeyView
@@ -109,8 +99,11 @@ class KeyController {
     }
     private val SHIFTLOCKTIME = 1500
 
-    var googleDisplayed = false
-    var useGoogle = true
+    val useGoogle: Boolean
+        get() {
+            val prefs = androidx.preference.PreferenceManager.getDefaultSharedPreferences(slime)
+            return prefs.getBoolean("use_google_api", false)
+        }
 
     private val SWIPEWIDTH = 30
 
@@ -207,7 +200,7 @@ class KeyController {
                 when (e) {
                     Event.UP1 -> {
                         if (selectedCand >= 0) {
-                            searchTask?.cancel(true)
+                            searchTask?.cancel()
                             fix(
                                 KeyView.candButtons[selectedCand].text,
                                 KeyView.candButtons[selectedCand].pat
@@ -443,7 +436,7 @@ class KeyController {
 
     private fun processKey(key: Key?) {
         if (key == null) return
-        searchTask?.cancel(true)
+        searchTask?.cancel()
 
         val c = key.str
         val p = key.pat

@@ -11,11 +11,19 @@
       </intent-filter>
       <meta-data android:name="android.view.im" android:resource="@xml/method" />
     </service>
+    <activity
+        android:name=".SettingsActivity"
+        android:exported="true"
+        android:label="@string/title_activity_settings">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
   </application>
   <uses-permission android:name="android.permission.INTERNET"></uses-permission> 
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <uses-sdk android:minSdkVersion="5" />
-  <supports-screens  
+  <supports-screens
       android:smallScreens="true"  
       android:normalScreens="true"  
       android:largeScreens="true"  

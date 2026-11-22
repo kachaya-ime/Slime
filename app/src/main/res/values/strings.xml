@@ -2,4 +2,9 @@
     <string name="app_name">Slime</string>
     <string name="action_settings">Settings</string>
     <string name="test_string">Test_String</string>
+    <string name="title_activity_settings">Slimeの設定</string>
+
+    <!-- Conversion Preferences -->
+    <string name="conversion_header">変換</string>
+    <string name="google_api_title">Google APIを使用して候補を取得</string>
 </resources>

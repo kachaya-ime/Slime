@@ -189,7 +189,7 @@ class LocalDict(assetManager: AssetManager) {
                     l.isNotEmpty() && l[0] != '#' && l[0] != ' ' && l[0] != '\t'
                 }.toList()
 
-                dict = arrayOfNulls<DictEntry>(validLines.size) as Array<DictEntry?>
+                dict = arrayOfNulls<DictEntry>(validLines.size)
                 for ((i, l) in validLines.withIndex()) {
                     val a = l.split("\t")
                     val outConn = if (a.size > 3 && a[3].isNotEmpty()) a[3].toInt() else 0
