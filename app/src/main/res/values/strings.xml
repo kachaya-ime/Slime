@@ -7,4 +7,20 @@
     <!-- Conversion Preferences -->
     <string name="conversion_header">変換</string>
     <string name="google_api_title">Google APIを使用して候補を取得</string>
+
+    <!-- Learn Dict Activity -->
+    <string name="learn_dict_title">学習辞書</string>
+    <string name="learn_dict_summary">学習した単語の一覧・編集・追加を行います</string>
+    <string name="dictionary_header">辞書</string>
+    <string name="add">追加</string>
+    <string name="edit">編集</string>
+    <string name="delete">削除</string>
+    <string name="delete_all">すべて削除</string>
+    <string name="word_label">単語</string>
+    <string name="pat_label">よみ</string>
+    <string name="date_label">日時</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save">保存</string>
+    <string name="confirm_delete">この単語を削除しますか？</string>
+    <string name="confirm_delete_all">学習辞書をすべて削除しますか？</string>
 </resources>

@@ -45,15 +45,17 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "learndict", null, 
     }
 }
 
+data class DictEntryRecord(val word: String, val pat: String, val date: String)
+
 class SQLDict(context: Context) {
     private val db: SQLiteDatabase = DBHelper(context).writableDatabase
 
     fun add(word: String, pat: String) { // エントリ追加
         // 最初に全部消す
-        db.delete("history", "word = '$word' AND pat = '$pat'", null)
+        db.delete("history", "word = ? AND pat = ?", arrayOf(word, pat))
         val patind = LocalDict.patInd(pat)
         // SQLite3の日付処理
-        db.execSQL("insert into history(word,pat,patind,date) values ('$word', '$pat', $patind, datetime('now', 'localtime'));")
+        db.execSQL("insert into history(word,pat,patind,date) values (?, ?, ?, datetime('now', 'localtime'));", arrayOf<Any>(word, pat, patind))
         Log.d("Slime", "SQLDict add: word='$word', pat='$pat', patind=$patind")
     }
 
@@ -69,7 +71,7 @@ class SQLDict(context: Context) {
             while (currentCount > max && cursor.moveToPosition(currentCount - 1)) {
                 val word = cursor.getString(0)
                 val pat = cursor.getString(1)
-                db.delete("history", "word = '$word' AND pat = '$pat'", null)
+                db.delete("history", "word = ? AND pat = ?", arrayOf(word, pat))
                 Log.d("Slime", "SQLDict limit: pruned old entry word='$word', pat='$pat' (total count was $currentCount, max=$max)")
                 currentCount--
             }
@@ -107,5 +109,38 @@ class SQLDict(context: Context) {
             res[i][1] = wordpats[i]
         }
         return res
+    }
+
+    fun getAllEntries(): List<DictEntryRecord> {
+        val list = ArrayList<DictEntryRecord>()
+        db.query(
+            "history",
+            arrayOf("word", "pat", "date"),
+            null, null, null, null, "date desc"
+        ).use { cursor ->
+            while (cursor.moveToNext()) {
+                val word = cursor.getString(0)
+                val pat = cursor.getString(1)
+                val date = cursor.getString(2)
+                list.add(DictEntryRecord(word, pat, date))
+            }
+        }
+        return list
+    }
+
+    fun delete(word: String, pat: String) {
+        db.delete("history", "word = ? AND pat = ?", arrayOf(word, pat))
+        Log.d("Slime", "SQLDict delete: word='$word', pat='$pat'")
+    }
+
+    fun update(oldWord: String, oldPat: String, newWord: String, newPat: String) {
+        delete(oldWord, oldPat)
+        add(newWord, newPat)
+        Log.d("Slime", "SQLDict update: old(word='$oldWord', pat='$oldPat') -> new(word='$newWord', pat='$newPat')")
+    }
+
+    fun deleteAll() {
+        db.delete("history", null, null)
+        Log.d("Slime", "SQLDict deleteAll")
     }
 }

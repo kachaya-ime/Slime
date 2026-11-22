@@ -12,4 +12,14 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        app:title="@string/dictionary_header">
+
+        <Preference
+            app:key="learn_dict_setting"
+            app:title="@string/learn_dict_title"
+            app:summary="@string/learn_dict_summary" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
