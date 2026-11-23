@@ -212,11 +212,10 @@ class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
             }
 
             if (!(key.str == "→" && (candPage == 0 || candPage == 4))) {
-                val gap = (3 * expand).toInt()
-                val left = (key.rect.left * expand).toInt() + gap / 2
-                val top = (key.rect.top * expand).toInt() + gap / 2
-                val right = (key.rect.right * expand).toInt() - gap / 2
-                val bottom = (key.rect.bottom * expand).toInt() - gap / 2
+                val left = (key.rect.left * expand).toInt()
+                val top = (key.rect.top * expand).toInt()
+                val right = (key.rect.right * expand).toInt()
+                val bottom = (key.rect.bottom * expand).toInt()
                 val dst = Rect(left, top, right, bottom)
                 if (drawable != null) {
                     drawable.bounds = dst
@@ -226,8 +225,8 @@ class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
                 //
                 // キー文字描画
                 //
-                val bodyRight = right - (3 * expand).toInt()
-                val bodyBottom = bottom - (3 * expand).toInt()
+                val bodyRight = right
+                val bodyBottom = bottom
                 val textWidth = p.measureText(key.str)
                 val baseX = left + (bodyRight - left - textWidth) / 2
                 val baseY = top + (bodyBottom - top - (ascent + descent)) / 2
