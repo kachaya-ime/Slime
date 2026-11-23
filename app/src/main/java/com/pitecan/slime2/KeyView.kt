@@ -194,9 +194,11 @@ class KeyView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
         canvas.drawColor(bgcolor)
         // [Kotlinらしい改善] インデックスベースのforループを forEach に置き換え、可読性を向上
         kpat.forEach { key ->
-            val width = key.rect.right - key.rect.left
-            val paint = if (width <= 24) tinyKeyPaint else if (width <= 32) smallKeyPaint else keyPaint
-            val p = paint ?: return@forEach
+            val height = (key.rect.bottom - key.rect.top).toFloat()
+            val width = (key.rect.right - key.rect.left).toFloat()
+            val p = keyPaint ?: return@forEach
+            val ratio = if (height > 0f) (width / height).coerceAtMost(1f) else 1f
+            p.textSize = height * ratio * 0.68f * expand
             val fontMetrics = p.fontMetrics
             val ascent = fontMetrics.ascent
             val descent = fontMetrics.descent

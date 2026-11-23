@@ -29,7 +29,18 @@ class Keys(assetManager: AssetManager, layoutFileName: String = "layouts.json") 
             if (layoutName == "meta") continue
 
             val layoutObj = jsonObject.getJSONObject(layoutName)
-            val rowsArray = layoutObj.getJSONArray("rows")
+            val extendsName = layoutObj.optString("extends", "")
+            val rowsArray = if (extendsName.isNotEmpty() && jsonObject.has(extendsName)) {
+                jsonObject.getJSONObject(extendsName).getJSONArray("rows")
+            } else {
+                layoutObj.optJSONArray("rows") ?: org.json.JSONArray()
+            }
+
+            val defaultShiftRef = if (layoutObj.has("defaultShiftKeypat") && !layoutObj.isNull("defaultShiftKeypat")) {
+                layoutObj.getString("defaultShiftKeypat")
+            } else {
+                null
+            }
 
             val keyList = mutableListOf<Key>()
 
@@ -74,7 +85,11 @@ class Keys(assetManager: AssetManager, layoutFileName: String = "layouts.json") 
                     val str = kObj.optString("str", "")
                     val pat = kObj.optString("pat", "")
                     val h = rowHeight
-                    val shiftRef = if (kObj.has("shiftKeypat") && !kObj.isNull("shiftKeypat")) kObj.getString("shiftKeypat") else null
+                    val shiftRef = if (kObj.has("shiftKeypat") && !kObj.isNull("shiftKeypat")) {
+                        kObj.getString("shiftKeypat")
+                    } else {
+                        defaultShiftRef
+                    }
 
                     val key = Key(currX.toInt(), startYRow.toInt(), w.toInt(), h.toInt(), str, pat, null)
                     keyList.add(key)
